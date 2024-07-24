@@ -29,7 +29,7 @@ class WordFourFormType extends AbstractType
                 ]
             ])
             ->add('save', SubmitType::class, [
-                'label' => 'Devinner ?',
+                'label' => 'Deviner ?',
             ])
         ;
     }
