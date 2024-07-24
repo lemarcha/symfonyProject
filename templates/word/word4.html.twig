@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mot 4 - Le Petit Site des Quatre Mots{% endblock %}
+
+{% block body %}
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert-{{ label }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+    <h1>Maintenant, il faut essayer de deviner le mot</h1>
+    <p>Je suis un compagnon discret, bien que rarement vu,
+        Je demeure dans l'ombre, attendant d'être mis à nu.
+        D'apparence simple, mon rôle est essentiel,
+        Je maintiens l'ordre et la forme, tel un gardien personnel.
+        Je porte fièrement des parures, mais jamais ne me pare,
+        Qui suis-je, cet objet que l'on oublie mais dont on ne peut se séparer ?</p>
+
+    {{ form(wordForm) }}
+{% endblock %}
