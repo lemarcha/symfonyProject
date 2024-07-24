@@ -8,20 +8,21 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper">
-    <h1>Tentative Mot 2! ✅</h1>
+<div class="example-wrapper mo2">
+    <div class="mo2">
+        <h1>Tentative Mot 2! ✅</h1>
 
-    <h3>Indice:</h3>
-    <p>Un concept fondamental en physique qui mesure la capacité à effectuer un travail.</p>
+        <h3>Indice:</h3>
+        <p class="special">Un concept fondamental en physique qui mesure la capacité à effectuer un travail.</p>
 
-    <hr>
-    {{ form_start(mot2Form)}}
+        <hr>
+        {{ form_start(mot2Form)}}
 
-    {{ form_label(mot2Form.name) }}
-    {{ form_widget(mot2Form.name) }}
-    <hr>
-    {{form_end(mot2Form)}}
+        {{ form_label(mot2Form.name) }}
+        {{ form_widget(mot2Form.name) }}
+        <hr>
+        {{form_end(mot2Form)}}
 
-
+    </div>
 </div>
 {% endblock %}

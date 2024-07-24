@@ -1,11 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    Vous avez Réussi !!!
+    <div class="mo2">
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert-{{ label }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
 
-    <p>Retournez à l'accueil et tenté de deviné un deuxieme mots!</p>
-    <img src={{ asset("assets/image/capture.jpg") }} alt="image winner">
-    <hr>
-    <a href={{ url("main_home") }}>Devinette</a>
-    <hr>
+        <p>Retournez à l'accueil et tenté de deviné un deuxieme mots!</p>
+        <img src={{ asset("assets/image/capture.jpg") }} class="img_mo2" alt="image winner">
+        <hr>
+
+    </div>
 {% endblock %}
