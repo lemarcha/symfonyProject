@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    Vous avez échoué !!!
+    
+    <p>Retournez à l'accueil pour retenté votre chance</p>
+    <img src={{ asset("assets/image/over.jpg") }} alt="image game over">
+    <hr>
+    <a href={{ url("main_home") }}>Devinette</a>
+    <hr>
+{% endblock %}
