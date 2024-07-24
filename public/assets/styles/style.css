@@ -118,6 +118,19 @@ p{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+p.indice {
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+.imageMot1{
+    margin-left: 180px;
+}
+
+.tentative{
+    margin-left: 350px;
+}
+
 #nerd{
     display: block;
     margin: 0 auto;
