@@ -17,20 +17,13 @@
         <img src="{{ asset('assets/logo/logo.png') }}" alt="logo">
         <h1>Le Petit Site des Quatre Mots</h1>
     {% endblock %}
-
-    {% for label, messages in app.flashes %}
-        {% for message in messages %}
-            <div class="alert-{{ label }}">
-                {{ message }}
-            </div>
-        {% endfor %}
-    {% endfor %}
 </header>
 
 <nav>
     {% block nav %}
         <ul>
             <li><a href={{ url("main_home") }}>Accueil</a></li>
+            <li><a href={{ url("word_word4") }}>Mot 4</a></li>
             <li><a href="{{ path('app_mot1') }}" title="Go back to homepage">Mot 1</a></li>
         </ul>
     {% endblock %}
