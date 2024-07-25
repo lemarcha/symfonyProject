@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="mo2">
+    
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert-{{ label }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+        
+        <p>Retournez à l'accueil pour retenté votre chance</p>
+        <img src={{ asset("assets/image/over.jpg") }} class="img_mo2" alt="image game over">
+        <hr>
+        <a href={{ url("app_mot2") }}>Retenté votre chance..</a>
+        <hr>
+    </div>
+{% endblock %}

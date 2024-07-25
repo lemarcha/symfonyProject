@@ -20,21 +20,25 @@
         <img src="{{ asset('assets/logo/logo.png') }}" alt="logo">
         <h1>Le Petit Site des Quatre Mots</h1>
     {% endblock %}
-
-    {% for label, messages in app.flashes %}
-        {% for message in messages %}
-            <div class="alert-{{ label }}">
-                {{ message }}
-            </div>
-        {% endfor %}
-    {% endfor %}
 </header>
 
 <nav>
     {% block nav %}
         <ul>
+            {% if app.user() %}
+                <li><a href={{ path('user_profil', { 'id': app.user.id }) }}>{{ app.user.username}}</a></li>
+            {% endif %}
             <li><a href={{ url("main_home") }}>Accueil</a></li>
-            <li><a href={{ url("mot3_jouer") }}>Mot 3</a></li>
+
+            {% if app.user() %}
+                <li><a href="{{ path('app_mot1') }}" title="Mot 1">Mot 1</a></li>
+                <li><a href={{ url("app_mot2") }}>Mot 2</a></li>
+                <li><a href={{ url("word_word4") }}>Mot 4</a></li>
+                <li><a href={{ url("app_logout") }}>Déconnexion</a></li>
+            {% else %}
+                <li><a href={{ url("app_register") }}>Inscription</a></li>
+                <li><a href={{ url("app_login") }}>Connexion</a></li>
+            {% endif %}
         </ul>
     {% endblock %}
 </nav>
