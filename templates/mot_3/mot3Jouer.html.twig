@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Jeu Mot 3{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="mot3_all_form">
+            <div class="card">
+                <div class="card-body"><p>Je suis une reproduction de quelque chose</p></div>
+            </div>
+            <br>
+            <div class="mot3_form">
+                <div class="form-group mot3_field">
+                    {{ form_start(mot3Form) }}
+                    {{form_row(mot3Form.name)}}
+                    <div class="col-auto my-1 mot3_submit">
+                        <button type="submit" class="btn btn-primary">Tester</button>
+                    </div>
+                    {{form_end(mot3Form)}}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
