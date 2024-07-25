@@ -1,0 +1,30 @@
+<?php
+
+namespace App\Controller;
+
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+
+class CommentairesController extends AbstractController
+{
+    /**
+     * @Route("/commentaires", name="app_commentaires")
+     */
+    public function list(): Response
+    {
+        return $this->render('commentaires/list.html.twig', [
+            'controller_name' => 'CommentairesController',
+        ]);
+    }
+
+       /**
+     * @Route("/commentaires/add", name="add_commentaires")
+     */
+    public function add(): Response
+    {
+        return $this->render('commentaires/add.html.twig', [
+            'controller_name' => 'CommentairesController',
+        ]);
+    }
+}

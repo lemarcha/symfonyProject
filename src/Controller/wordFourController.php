@@ -2,15 +2,10 @@
 
 namespace App\Controller;
 
-use App\Entity\Wish;
 use App\Entity\WordFour;
-use App\Form\WishFormType;
 use App\Form\WordFourFormType;
-use App\Helper\Censurator;
 use App\Helper\VerificatorWordFour;
-use App\Repository\WishRepository;
 use App\Repository\WordFourRepository;
-use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
