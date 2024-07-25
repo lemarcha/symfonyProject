@@ -1,16 +1,40 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello Mot1Controller!{% endblock %}
+{% block title %}Ajouter un commentaire{% endblock %}
 
 {% block body %}
 <style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+p {
+    margin:0;
+    padding:0;
+    box-shadow: none;
+    border-radius: none;
+    margin-left: 15px;
+    background-color: #f6f6f6;
+}
+
+.add {
+    margin: 0 500px 15px 500px;
+}
+
+#comment_commentaires{
+    width: 653px;
+    height: 132px;
+}
 </style>
 
-<div class="example-wrapper">
+<div class="add">
     <h1>Ajouter un commentaire</h1>
     {# <img class="imageMot1" src={{asset("image/win.jpg")}} alt="gagné" width=470 height=300> #}
     <h2>Que pensez-vous de notre application ? ❤</h2>
+    <hr>
+        <p>Pseudo : {{userEnCours.username}} 🙌</p>
+        {{ form_start(commentaireForm)}}
+        <br>
+            <p>{{ form_label(commentaireForm.commentaires)}}</p>
+            <p>{{ form_widget(commentaireForm.commentaires)}}</p>
+        <br>
+        <hr>
+        {{form_end(commentaireForm)}}
 </div>
 {% endblock %}

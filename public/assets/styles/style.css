@@ -128,7 +128,8 @@ p.indice {
 }
 
 .tentative{
-    margin-left: 350px;
+    display: flex;
+    justify-content: center;
 }
 
 #nerd{
@@ -164,6 +165,10 @@ p.indice {
     text-align: center;
 }
 
+.form{
+    display: flex;
+    justify-content: center;
+}
 /* Main Content */
 main {
     max-width: 800px;
@@ -230,3 +235,4 @@ p.special{
         margin: 10px 0;
     }
 }
+
